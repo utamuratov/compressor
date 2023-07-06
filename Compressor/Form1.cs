@@ -69,7 +69,7 @@ namespace Compressor
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             try
-            {
+                {
                 string fileName = "";
                 string fileType;
                 DateTime fileModified;
@@ -88,6 +88,7 @@ namespace Compressor
                         fileName = fileName.Substring(fileName.LastIndexOf("\\") + 1);
                         fileType = fileName.Substring(fileName.LastIndexOf(".") + 1);
                         fileName = fileName.Substring(0, fileName.LastIndexOf("."));
+                        dataGridView1.VirtualMode = false;
                         dataGridView1.Rows.Add(fileFullName, fileName, fileType, Math.Round(fileSize, 1) + " KB", fileModified);
 
                         fs.Close();

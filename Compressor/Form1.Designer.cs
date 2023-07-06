@@ -30,8 +30,12 @@
         {
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnAddingFile = new MetroFramework.Controls.MetroButton();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCompressor = new MetroFramework.Controls.MetroButton();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.btnAddingFile = new MetroFramework.Controls.MetroButton();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.btnDecompressor = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.GridFileFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,13 +47,9 @@
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -72,6 +72,55 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(690, 98);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33499F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33168F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.btnCompressor, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel3, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnAddingFile, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.metroLabel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnDecompressor, 3, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.19889F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.80111F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(261, 92);
+            this.tableLayoutPanel1.TabIndex = 5;
+            // 
+            // btnCompressor
+            // 
+            this.btnCompressor.BackColor = System.Drawing.Color.Transparent;
+            this.btnCompressor.BackgroundImage = global::Compressor.Properties.Resources.archives_2;
+            this.btnCompressor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCompressor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCompressor.Location = new System.Drawing.Point(90, 3);
+            this.btnCompressor.Name = "btnCompressor";
+            this.btnCompressor.Size = new System.Drawing.Size(77, 66);
+            this.btnCompressor.TabIndex = 4;
+            this.btnCompressor.UseSelectable = true;
+            this.btnCompressor.Click += new System.EventHandler(this.btnCompressor_Click);
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel3.Location = new System.Drawing.Point(176, 72);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(82, 15);
+            this.metroLabel3.TabIndex = 13;
+            this.metroLabel3.Text = "Uncompressing";
+            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
+            // 
             // btnAddingFile
             // 
             this.btnAddingFile.BackColor = System.Drawing.Color.Transparent;
@@ -80,24 +129,32 @@
             this.btnAddingFile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddingFile.Location = new System.Drawing.Point(3, 3);
             this.btnAddingFile.Name = "btnAddingFile";
-            this.btnAddingFile.Size = new System.Drawing.Size(78, 68);
+            this.btnAddingFile.Size = new System.Drawing.Size(78, 66);
             this.btnAddingFile.TabIndex = 3;
             this.btnAddingFile.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAddingFile.UseSelectable = true;
             this.btnAddingFile.Click += new System.EventHandler(this.btnAddingFile_Click);
             // 
-            // btnCompressor
+            // metroLabel2
             // 
-            this.btnCompressor.BackColor = System.Drawing.Color.Transparent;
-            this.btnCompressor.BackgroundImage = global::Compressor.Properties.Resources.archives_2;
-            this.btnCompressor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCompressor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCompressor.Location = new System.Drawing.Point(86, 3);
-            this.btnCompressor.Name = "btnCompressor";
-            this.btnCompressor.Size = new System.Drawing.Size(77, 68);
-            this.btnCompressor.TabIndex = 4;
-            this.btnCompressor.UseSelectable = true;
-            this.btnCompressor.Click += new System.EventHandler(this.btnCompressor_Click);
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel2.Location = new System.Drawing.Point(90, 72);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(73, 15);
+            this.metroLabel2.TabIndex = 12;
+            this.metroLabel2.Text = "Compressing";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel1.Location = new System.Drawing.Point(3, 72);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(76, 17);
+            this.metroLabel1.TabIndex = 11;
+            this.metroLabel1.Text = "Adding file";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnDecompressor
             // 
@@ -105,9 +162,9 @@
             this.btnDecompressor.BackgroundImage = global::Compressor.Properties.Resources.unarchiver_2;
             this.btnDecompressor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnDecompressor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDecompressor.Location = new System.Drawing.Point(169, 3);
+            this.btnDecompressor.Location = new System.Drawing.Point(176, 3);
             this.btnDecompressor.Name = "btnDecompressor";
-            this.btnDecompressor.Size = new System.Drawing.Size(78, 68);
+            this.btnDecompressor.Size = new System.Drawing.Size(78, 66);
             this.btnDecompressor.TabIndex = 5;
             this.btnDecompressor.UseSelectable = true;
             this.btnDecompressor.Click += new System.EventHandler(this.btnDecompressor_Click);
@@ -189,63 +246,6 @@
             // 
             this.folderBrowserDialog1.Description = "Choose directory for saving file(s)";
             // 
-            // metroLabel1
-            // 
-            this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel1.Location = new System.Drawing.Point(4, 75);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(76, 17);
-            this.metroLabel1.TabIndex = 11;
-            this.metroLabel1.Text = "Adding file";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel2.Location = new System.Drawing.Point(90, 75);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(78, 14);
-            this.metroLabel2.TabIndex = 12;
-            this.metroLabel2.Text = "Compressing";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.tableLayoutPanel1.AutoScroll = true;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33499F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33168F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.btnCompressor, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel3, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnAddingFile, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.metroLabel1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnDecompressor, 3, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 79.19889F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.80111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(261, 92);
-            this.tableLayoutPanel1.TabIndex = 5;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel3.Location = new System.Drawing.Point(169, 75);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(73, 15);
-            this.metroLabel3.TabIndex = 13;
-            this.metroLabel3.Text = "Uncompressing";
-            this.metroLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroLabel3.Click += new System.EventHandler(this.metroLabel3_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,9 +257,9 @@
             this.Name = "Form1";
             this.Text = "Compressor";
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
